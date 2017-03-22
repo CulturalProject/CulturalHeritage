@@ -1,13 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <head>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>문화재청 202번지</title>
-<link href="./resources/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="./resources/css/style.css" rel="stylesheet" type="text/css"
+	media="screen" />
 <script type="text/javascript" src="./resources/js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="./resources/js/jquery.gallerax-0.2.js"></script>
+<script type="text/javascript"
+	src="./resources/js/jquery.gallerax-0.2.js"></script>
 <style type="text/css">
 @import "./resources/css/gallery.css";
 </style>
@@ -17,23 +19,34 @@
 		<div id="header">
 			<div id="logo">
 				<h1>
-					<a href="#">문화재청 202번지 </a>
+					<a href="<%=request.getContextPath()%>/index.jsp">문화재청 202번지 </a>
 				</h1>
-				<p>
-					design by <a href="http://www.freecsstemplates.org/">Free CSS
-						Templates</a>
-				</p>
 			</div>
 		</div>
 		<!-- end #header -->
 		<div id="menu">
 			<ul>
-				<li class="current_page_item"><a href="#">Home</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Photos</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Links</a></li>
-				<li><a href="#">Contact</a></li>
+				<li class="current_page_item">
+				<a href="#" style="font-size: 14px;">새소식</a></li>
+				<li>
+				<a href="#" style="font-size: 14px;">민원마당</a>
+				</li>
+				<li>
+				<a href="#" style="font-size: 14px;">문화유산정보</a>
+				</li>
+				<li>
+				<a href="#" style="font-size: 14px;">문화재청소개</a>
+				</li>
+				<!-- Search 폼  -->
+				<li style="float: right; padding: 7px 10px 0 0">
+					<form method="get" action="#">
+						<div>
+							<input type="text" name="s" id="search-text" value="" /> &nbsp;
+							<input type="submit" id="search-submit" value="GO" />
+						</div>
+					</form>
+				</li>
+				<!-- Search 폼끝!  -->
 			</ul>
 		</div>
 		<!-- end #menu -->
@@ -46,20 +59,21 @@
 								<img class="output" src="./resources/images/img04.jpg" alt="" />
 								<div id="thumbnail-bg">
 									<ul class="thumbnails">
-										<li><img class="active" src="./resources/images/img04.jpg"
-											title="Monument Valley" alt="" width="604" height="375"
+										<li><img class="active"
+											src="./resources/images/img04.jpg" title="Monument Valley"
+											alt="" width="604" height="375"
 											onmouseover="this.style.opacity=1;this.filters.alpha.opacity=100"
 											onmouseout="this.style.opacity=0.4;this.filters.alpha.opacity=70" /></li>
-										<li><img src="./resources/images/img05.jpg" title="Honey Bee" alt=""
-											width="100" height="75"
+										<li><img src="./resources/images/img05.jpg"
+											title="Honey Bee" alt="" width="100" height="75"
 											onmouseover="this.style.opacity=1;this.filters.alpha.opacity=100"
 											onmouseout="this.style.opacity=0.4;this.filters.alpha.opacity=70" /></li>
-										<li><img src="./resources/images/img06.jpg" title="Cup of Coffee"
-											alt="" width="100" height="75"
+										<li><img src="./resources/images/img06.jpg"
+											title="Cup of Coffee" alt="" width="100" height="75"
 											onmouseover="this.style.opacity=1;this.filters.alpha.opacity=100"
 											onmouseout="this.style.opacity=0.4;this.filters.alpha.opacity=70" /></li>
-										<li><img src="./resources/images/img07.jpg" title="Grand Tetons"
-											alt="" width="100" height="75"
+										<li><img src="./resources/images/img07.jpg"
+											title="Grand Tetons" alt="" width="100" height="75"
 											onmouseover="this.style.opacity=1;this.filters.alpha.opacity=100"
 											onmouseout="this.style.opacity=0.4;this.filters.alpha.opacity=70" /></li>
 									</ul>
@@ -145,7 +159,7 @@
 					<!-- end #content -->
 					<div id="sidebar">
 						<ul>
-							<li>
+							<!-- 		<li>
 								<div id="search">
 									<form method="get" action="#">
 										<div>
@@ -155,7 +169,7 @@
 									</form>
 								</div>
 								<div style="clear: both;">&nbsp;</div>
-							</li>
+							</li> -->
 							<li>
 								<h2>Aliquam tempus</h2>
 								<p>Mauris vitae nisl nec metus placerat perdiet est.
