@@ -130,7 +130,7 @@ a:hover {
 
 #search-text {
 	width: 170px;
-	padding: 6px 5px 2px 5px;
+	height: 23px;
 	border: none;
 	background: #FFFFFF;
 	text-transform: lowercase;
@@ -152,10 +152,10 @@ a:hover {
 
 #menu {
 	width: 940px;
-	height: 36px;
+	height: 40px;
 	margin: 0 auto;
 	padding: 0;
-	background: #FC9D00;
+	background: #3d3b3b;
 }
 
 #menu ul {
@@ -171,7 +171,7 @@ a:hover {
 
 #menu a {
 	display: block;
-	height: 26px;
+	height: 30px;
 	margin-bottom: 10px;
 	padding: 10px 20px 0px 20px;
 	text-decoration: none;
@@ -185,12 +185,12 @@ a:hover {
 }
 
 #menu a:hover, #menu .current_page_item a {
-	background: #E93301;
+	background: #205cb5; /* 선택 hover 색깔  */
 	text-decoration: none;
 }
 
 #menu .current_page_item a {
-	background: #E93301;
+	background: #205cb5; /* 선택 hover 색깔  */
 	color: #FFFFFF;
 }
 
@@ -330,7 +330,7 @@ a:hover {
 	padding-left: 30px;
 	padding-top: 6px;
 	padding-bottom: 6px;
-	background: #FC9D00;
+	background: #fc0021; /* 사이드메 뉴 색깔*/
 	letter-spacing: -.5px;
 	font-size: 1.8em;
 	color: #FFFFFF;
