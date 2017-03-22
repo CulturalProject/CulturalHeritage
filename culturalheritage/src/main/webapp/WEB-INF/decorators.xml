@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<decorators defaultdir="/decorators">
+	<decorator name="main" page="decorator.jsp">
+		<pattern>/**</pattern>
+	</decorator>
+	
+	<decorator name="non" page="nondecorator.jsp">
+		<pattern>/admin/step**</pattern>
+		<pattern>/course/courseAble</pattern>
+		<pattern>/course/course**</pattern>
+		<pattern>/find**</pattern>
+		<pattern>/cssExample</pattern>
+		<pattern>/lgBoard</pattern>
+		<pattern>/lgLogin</pattern>
+		<pattern>/lgMulti</pattern>
+		<pattern>/lgMenu</pattern>
+		<pattern>/adminJoin</pattern>
+		<pattern>/admin/layoutPreview</pattern>
+		<pattern>/layout_type/login**</pattern>
+		<pattern>/layout_type/access**</pattern>
+		<pattern>/index</pattern>
+		<pattern>/main</pattern>
+		<pattern>/loginForm</pattern>
+		<pattern>/lctre/detailLctre</pattern>
+	</decorator>
+	
+	<decorator name="lec" page="lecdecorator.jsp">
+		<pattern>/lctre/**</pattern>
+	</decorator>
+	
+	<decorator name="admin" page="admindecorator.jsp">
+		<pattern>/admin/**</pattern>
+	</decorator>
+	
+	<excludes>
+		<pattern>/admin/log**</pattern>
+		<pattern>/**/menu.jsp</pattern>
+		<pattern>/dynamicCss/menu.do</pattern>	
+		<pattern>/profsr/findLctre</pattern>
+		<pattern>/lctre/testList</pattern>
+		<!-- <pattern>/**/dbCSS.jsp</pattern> -->
+		<!-- <pattern>/**/menu.jsp  라고 해도 되는데 이미 다른애가 써서...</pattern> -->
+		<!-- <pattern>/**/top_decorator.jsp</pattern>
+		<pattern>/**/left_decorator.jsp</pattern>
+		<pattern>/**/footer_decorator.jsp</pattern> -->
+		
+	</excludes>
+	
+</decorators>

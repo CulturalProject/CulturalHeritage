@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+	
+	<view-controller path="/index" view-name="index"/>
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
+	<!-- <resources mapping="/css/**" location="/resources/css/"/>
+	<resources mapping="/js/**" location="/resources/js/" /> -->
+	<resources mapping="/product_images/**" location="/resources/product_images/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		p:prefix="/WEB-INF/views/"
+		p:suffix=".jsp"
+		p:order="1"
+	/>
+	<beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver"
+		p:order="0" 
+	/>
+	<beans:bean id="download" class="com.uni.fems.common.DownloadView" />
+ 	<beans:bean id="listExcel" class="com.uni.fems.common.ListExcelView" />
+	<!-- <beans:bean id="productListPdf" class="com.test.board.view.ProductListPdfView" /> -->
+	
+	<beans:bean id="multipartResolver"		
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" 
+		p:defaultEncoding="utf-8"
+	/>
+	
+	<context:component-scan base-package="com.uni" use-default-filters="false">
+       <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+       <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+       <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
+	</context:component-scan>
+	
+	
+	
+	<context:annotation-config />
+	
+	<interceptors>
+		<interceptor>
+			<mapping path="/**" />
+			<beans:bean id="decoInterceptor" class="com.uni.fems.interceptor.DecoInterceptor" />
+		</interceptor>
+		<interceptor>
+			<mapping path="/**/manageLctre" />
+			<mapping path="/**/courseList" />
+			<mapping path="/**/evlScope" />
+			<beans:bean id="eventInterceptor" class="com.uni.fems.interceptor.EventInterceptor" />
+		</interceptor>
+		<interceptor>
+			<mapping path="/lctre/**" />
+			<exclude-mapping path="/lctre/detailLctre"/>
+			<beans:bean id="lctreInterceptor" class="com.uni.fems.interceptor.LctreInterceptor" />
+		</interceptor>
+		<interceptor>
+			<mapping path="/index" />
+			<beans:bean id="adminInterceptor" class="com.uni.fems.interceptor.AdminInterceptor" />
+		</interceptor>
+	</interceptors>
+		
+</beans:beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
