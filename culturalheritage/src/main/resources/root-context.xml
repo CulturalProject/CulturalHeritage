@@ -9,14 +9,7 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	
 		
-	<bean id="fileDownload" class="com.uni.fems.common.FileDownload" />
-	<bean id="supporter" class="com.uni.fems.common.Supporter" />
-	<bean id="callPaging" class="com.uni.fems.common.Paging" />
-
-
-
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
 		p:dataSource-ref="dataSource" />
@@ -31,27 +24,16 @@
 		</tx:attributes>
 	</tx:advice>
 
-
-
-	<context:component-scan base-package="com.uni"
-		use-default-filters="false">
-		<context:include-filter type="annotation"
-			expression="org.springframework.stereotype.Service" />
-		<context:include-filter type="annotation"
-			expression="org.springframework.stereotype.Repository" />
-		<context:exclude-filter type="annotation"
-			expression="org.springframework.stereotype.Controller" />
-
+	<context:component-scan base-package="com.gov" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service" />
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
 		<!-- <context:include-filter type="annotation" expression=""/> -->
 	</context:component-scan>
 
-
-
-
-
 	<aop:config>
 		<aop:pointcut
-			expression="execution(public * com.uni.fems.service.impl.*ServiceImpl.*(..))"
+			expression="execution(public * com.gov.culher.service.impl.*ServiceImpl.*(..))"
 			id="servicePublicMethod" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="servicePublicMethod" />
 	</aop:config>

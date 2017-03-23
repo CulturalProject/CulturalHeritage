@@ -27,12 +27,7 @@
 	<http pattern="/**" use-expressions="true" entry-point-ref="customAuthenticationEntryPoint" >
 		<request-cache ref="nullRequestCache"/>
 		<access-denied-handler error-page="/security/accessDenied"/>
-		<intercept-url pattern="/stdnt/**" access="hasAnyRole('ROLE_STD,ROLE_ADMIN')"/>
-		<intercept-url pattern="/profsr/**" access="hasAnyRole('ROLE_PRO,ROLE_ADMIN')"/>
-		<intercept-url pattern="/sklstf/**" access="hasAnyRole('ROLE_STF,ROLE_ADMIN')"/>
 		<intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>
-		<intercept-url pattern="/lctre/**" access="isAuthenticated()"/>
-		<intercept-url pattern="/course/**" access="isAuthenticated()"/>
 		<intercept-url pattern="/**" access="permitAll"/>
 		
 		<form-login 
@@ -49,18 +44,18 @@
 	</http>
 	
 	<beans:bean id="customAuthenticationEntryPoint" 
-		class="com.uni.fems.security.CustomAuthenticationEntryPoint" 
+		class="com.gov.culher.security.CustomAuthenticationEntryPoint" 
 		p:loginFormPath="/loginForm"/>
 		
 	<beans:bean id="nullRequestCache"
 		class="org.springframework.security.web.savedrequest.NullRequestCache" />
 	
 	<beans:bean id="loginSuccessHandler" 
-		class="com.uni.fems.security.LoginSuccessHandler"
+		class="com.gov.culher.security.LoginSuccessHandler"
 		p:defaultTargetUrl="/index"
 		/>
 	<beans:bean id="loginFailureHandler" 
-		class="com.uni.fems.security.LoginFailureHandler"
+		class="com.gov.culher.security.LoginFailureHandler"
 		p:loginFormPath="/loginForm"
 	/>
 
