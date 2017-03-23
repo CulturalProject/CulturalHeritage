@@ -5,13 +5,95 @@
 <meta name="description" content="" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>문화재청 202번지</title>
-<link href="./resources/css/style.css" rel="stylesheet" type="text/css"
-	media="screen" />
+<link href="./resources/css/style.css" rel="stylesheet" type="text/css" media="screen" />
 <script type="text/javascript" src="./resources/js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript"
-	src="./resources/js/jquery.gallerax-0.2.js"></script>
+<script type="text/javascript" src="./resources/js/jquery.gallerax-0.2.js"></script>
 <style type="text/css">
 @import "./resources/css/gallery.css";
+@import "./resources/css/style.css";
+
+
+
+
+
+#menu {
+	width: 940px;
+	height: 40px;
+	margin: 0 auto;
+	padding: 0;
+	background: #3d3b3b;
+	position:relative;
+}
+
+/* #menu .dropdown {
+	margin: 0px 0px 0px 10px;
+	padding: 0;
+	list-style: none;
+	line-height: normal;
+} */
+
+#menu  #dropdown-a {
+	display: block;
+	height: 30px;
+	margin-bottom: 10px;
+	padding: 10px 20px 0px 20px;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	border: none;
+}
+
+/* #menu a:hover, #menu .dropdowm-item a:hover {
+	background: #205cb5; /* 선택 hover 색깔 
+	text-decoration: none;
+} */
+
+#menu .dropdowm-item a:hover {
+	background: #205cb5; /* 선택 hover 색깔  */
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+/* dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: #3d3b3b;
+    float: left;
+    height:40px;
+}
+
+/* .dropdowm-item {
+	height:40px;
+} */
+
+.dropdown:hover {
+	background-color: #205cb5;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: #eee;
+    /* width: 100%; */
+    /* height:300px; */
+    margin: 0 auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: inline-block;;
+    /* left:0px; */
+}
+
+
 </style>
 </head>
 <body>
@@ -25,29 +107,47 @@
 		</div>
 		<!-- end #header -->
 		<div id="menu">
-			<ul>
-				<li class="current_page_item">
-				<a href="#" style="font-size: 14px;">새소식</a></li>
-				<li>
-				<a href="#" style="font-size: 14px;">민원마당</a>
-				</li>
-				<li>
-				<a href="#" style="font-size: 14px;">문화유산정보</a>
-				</li>
-				<li>
-				<a href="#" style="font-size: 14px;">문화재청소개</a>
-				</li>
-				<!-- Search 폼  -->
-				<li style="float: right; padding: 7px 10px 0 0">
+			
+			<!--  -->
+				<div class="dropdown">
+					<span class="dropdowm-item"><a href="#" id="dropdown-a">새소식</a></span>
+						<div class="dropdown-content">
+							<p><a href="">테스트1</a></p>
+						</div>
+				</div>
+				
+				<div class="dropdown">
+					<span class="dropdowm-item"><a href="#" id="dropdown-a">민원마당</a></span>
+						<div class="dropdown-content">
+							<p><a href="">민원마당 하위</a></p>
+						</div>
+				</div>
+				
+				<div class="dropdown">
+					<span class="dropdowm-item"><a href="#" id="dropdown-a">문화유산정보</a></span>
+						<div class="dropdown-content">
+							<p><a href="">문화유산정보 하위</a></p>
+						</div>
+				</div>
+				
+				<div class="dropdown">
+					<span class="dropdowm-item"><a href="#" id="dropdown-a">문화재청소개</a></span>
+						<div class="dropdown-content">
+							<p><a href="">문화재청소개 하위</a></p>
+						</div>
+				</div>
+				
+			<!-- Search 폼  -->
+				<span style="float: right; padding: 7px 10px 0 0">
 					<form method="get" action="#">
 						<div>
 							<input type="text" name="s" id="search-text" value="" /> &nbsp;
 							<input type="submit" id="search-submit" value="GO" />
 						</div>
 					</form>
-				</li>
+				</span>
 				<!-- Search 폼끝!  -->
-			</ul>
+			<!-- </ul> -->
 		</div>
 		<!-- end #menu -->
 		<div id="page">

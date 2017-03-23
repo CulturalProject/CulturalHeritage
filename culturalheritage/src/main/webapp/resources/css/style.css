@@ -149,7 +149,7 @@ a:hover {
 }
 
 /* Menu */
-
+/* 
 #menu {
 	width: 940px;
 	height: 40px;
@@ -158,15 +158,15 @@ a:hover {
 	background: #3d3b3b;
 }
 
-#menu ul {
+#menu .dropdown {
 	margin: 0px 0px 0px 10px;
 	padding: 0;
 	list-style: none;
 	line-height: normal;
 }
 
-#menu li {
-	float: left;
+#menu .dropdown {
+	
 }
 
 #menu a {
@@ -184,15 +184,50 @@ a:hover {
 	border: none;
 }
 
-#menu a:hover, #menu .current_page_item a {
-	background: #205cb5; /* 선택 hover 색깔  */
+#menu a:hover, #menu .dropdowm-item a {
+	background: #205cb5; 선택 hover 색깔 
 	text-decoration: none;
 }
 
-#menu .current_page_item a {
-	background: #205cb5; /* 선택 hover 색깔  */
+#menu .dropdowm-item a {
+	background: #205cb5; 선택 hover 색깔 
 	color: #FFFFFF;
 }
+
+dropdown
+.dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: #3d3b3b;
+    float: left;
+   
+}
+
+.dropdowm-item {
+	 width:160px;
+	height:40px;
+}
+
+.dropdown:hover {
+	background-color: #205cb5;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3d3b3b;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+ */
+
+
 
 /* Page */
 
