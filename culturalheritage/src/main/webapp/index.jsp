@@ -25,13 +25,6 @@
 	position:relative;
 }
 
-/* #menu .dropdown {
-	margin: 0px 0px 0px 10px;
-	padding: 0;
-	list-style: none;
-	line-height: normal;
-} */
-
 #menu  #dropdown-a {
 	display: block;
 	height: 30px;
@@ -47,11 +40,6 @@
 	border: none;
 }
 
-/* #menu a:hover, #menu .dropdowm-item a:hover {
-	background: #205cb5; /* 선택 hover 색깔 
-	text-decoration: none;
-} */
-
 #menu .dropdowm-item a:hover {
 	background: #205cb5; /* 선택 hover 색깔  */
 	color: #FFFFFF;
@@ -66,10 +54,6 @@
     float: left;
     height:40px;
 }
-
-/* .dropdowm-item {
-	height:40px;
-} */
 
 .dropdown:hover {
 	background-color: #205cb5;
