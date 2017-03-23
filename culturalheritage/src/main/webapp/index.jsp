@@ -126,7 +126,7 @@
 				<div class="dropdown">
 					<span class="dropdowm-item"><a href="#" id="dropdown-a">문화유산정보</a></span>
 						<div class="dropdown-content">
-							<p><a href="">문화유산정보 하위</a></p>
+							<p><a href="<%=request.getContextPath()%>/village/villageCultural">우리동네 문화재</a></p>
 						</div>
 				</div>
 				
