@@ -12,72 +12,6 @@
 @import "./resources/css/gallery.css";
 @import "./resources/css/style.css";
 
-
-
-
-
-#menu {
-	width: 940px;
-	height: 40px;
-	margin: 0 auto;
-	padding: 0;
-	background: #3d3b3b;
-	position:relative;
-}
-
-#menu  #dropdown-a {
-	display: block;
-	height: 30px;
-	margin-bottom: 10px;
-	padding: 10px 20px 0px 20px;
-	text-decoration: none;
-	text-align: center;
-	text-transform: uppercase;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	font-weight: bold;
-	color: #FFFFFF;
-	border: none;
-}
-
-#menu .dropdowm-item a:hover {
-	background: #205cb5; /* 선택 hover 색깔  */
-	color: #FFFFFF;
-	text-decoration: none;
-}
-
-/* dropdown */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    background-color: #3d3b3b;
-    float: left;
-    height:40px;
-}
-
-.dropdown:hover {
-	background-color: #205cb5;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 40px;
-    background-color: #eee;
-    /* width: 100%; */
-    /* height:300px; */
-    margin: 0 auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: inline-block;;
-    /* left:0px; */
-}
-
-
 </style>
 </head>
 <body>
@@ -90,9 +24,55 @@
 			</div>
 		</div>
 		<!-- end #header -->
-		<div id="menu">
+		
+		
+<nav class="menu">
+	<ul class="menu-bar">
+		<li class="dropdown-item"><a href="#">홈으로</a></li>
+		<li class="dropdown-item"><a href="#">새소식</a>
+			<ul class="dropdown-content">
+				<li><a href="#">새소식 하위1</a>
+				<a href="#">새소식 하위2</a></li>
+				<li><a href="#">새소식 하위3</a></li>
+			</ul>
+		</li>
+		<li class="dropdown-item"><a href="#">민원마당</a>
+			<ul class="dropdown-content">
+				<li><a href="#">민원민원</a></li>
+			</ul>
+		</li>
+		<li class="dropdown-item"><a href="#">문화유산정보</a>
+			<ul class="dropdown-content">
+				<li><a href="<%=request.getContextPath()%>/village/villageCultural">우리동네문화재</a></li>
+			</ul>
+		</li>
+		<li class="dropdown-item"><a href="#">문화재청소개</a>
+			<ul class="dropdown-content">
+				<li><a href="#">문화재청 소개소개</a></li>
+			</ul>
+		</li>
+		<li>
+        	<span style="float: right; padding: 7px 10px 0 0;">
+					<form method="get" action="#">
+						<div>
+							<input type="text" name="s" id="search-text" value="" /> &nbsp;
+							<input type="submit" id="search-submit" value="GO" />
+						</div>
+					</form>
+				</span>
+        </li>
+
+	</ul>
+</nav>
+		
+		
+		<!-- /////////////  기존거  /////////////// -->
+		
+		<%-- <div id="menu">
 			
 			<!--  -->
+				
+			
 				<div class="dropdown">
 					<span class="dropdowm-item"><a href="#" id="dropdown-a">새소식</a></span>
 						<div class="dropdown-content">
@@ -132,7 +112,15 @@
 				</span>
 				<!-- Search 폼끝!  -->
 			<!-- </ul> -->
-		</div>
+		</div> --%>
+		
+		
+		
+		<!-- //////////////////////////// -->
+		
+		
+		
+		
 		<!-- end #menu -->
 		<div id="page">
 			<div id="page-bgtop">
